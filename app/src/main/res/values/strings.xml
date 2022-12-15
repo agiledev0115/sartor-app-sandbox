@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Sartor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back">Back</string>
+    <string name="forgot_password"><u>Forgot password</u></string>
+    <string name="email">Email</string>
+    <string name="u_nasty_gal_u"><u>Nasty gal</u></string>
+    <string name="review">I got it for my daughter for her 16th birthday. She loved it. It came earlier than expected. I recommend buying from this seller</string>
+    <string name="this_is_givone_design">This is Givone DESIGN - your go-to for all latest trends, no
+     matter who you are, where you are from, and what you\'re up to.\nOur universal brand is here for you
+    , and comes in all our fit ranges: Curve ,Tall, Petite and Maternity. Created by us, styled by you.
+    \n\nShonen two piece outfit by Givone.
+    \nGoing on a picnic, outdoor partying on a summer day?,
+    \nThis is the outfit for you. Look chic and stylish while having fun
+        \n\n● Cotton
+        \n\n● Soft
+        \n\n● Easy to wash
+        \n\n● Two piece clothing
+    </string>
+    <string name="model_wears_uk_8_w26_l32">Model Wears: UK 8/W26" L32"</string>
+    <string name="model_s_height">Model\'s Height: 168cm/5\'6"</string>
+    <string name="size_fit">Size &amp; Fit</string>
+</resources>

@@ -1,0 +1,5 @@
+include ':ai'
+include ':app-debug'
+include ':app-release'
+include ':app'
+rootProject.name = "Sartor"

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/ring"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:src="@drawable/instagram_ring"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/addidas"
+        app:layout_constraintBottom_toBottomOf="@id/ring"
+        app:layout_constraintEnd_toEndOf="@id/ring"
+        app:layout_constraintStart_toStartOf="@id/ring"
+        app:layout_constraintTop_toTopOf="@id/ring"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.status" />
+
+    <TextView
+        android:id="@+id/brandName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Addidas"
+        app:layout_constraintStart_toEndOf="@+id/ring"
+        app:layout_constraintTop_toTopOf="@+id/ring" />
+
+    <TextView
+        android:id="@+id/tv_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/brandName"
+        app:layout_constraintTop_toBottomOf="@id/brandName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

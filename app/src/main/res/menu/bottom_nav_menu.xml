@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment2"
+        android:icon="@drawable/ic_home"
+        android:enabled="true"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/discoveryFragment"
+        android:icon="@drawable/ic_discovery"
+        android:enabled="true"
+        android:title="Discovery" />
+
+    <item
+        android:id="@+id/searchFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_search"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/blogFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_round_sticky_note_2_24"
+        android:title="Magazine" />
+
+    <item
+        android:id="@+id/userProfileFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile" />
+</menu>

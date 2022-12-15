@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            app:searchIcon="@drawable/ic_search"
+            android:layout_marginTop="16dp"
+            app:closeIcon="@drawable/ic_close"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/search_bg"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="32dp"
+            app:queryBackground="@null"
+            app:queryHint="Search for products, sellers and brands" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            app:tabTextAppearance="@style/TabText"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/searchView">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brands" />
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Seller" />-->
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+       <androidx.viewpager2.widget.ViewPager2
+           android:id="@+id/vpSearch"
+           android:layout_width="match_parent"
+           app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+           android:layout_height="0dp"
+           app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

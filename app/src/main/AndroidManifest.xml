@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sartor">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.SartorApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Sartor.welcome"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.fragments.home_screens.AddressBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Sartor.welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.ChatActivity"
+            android:theme="@style/Theme.Sartor.white" />
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:theme="@style/Theme.Sartor.white"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ui.activity.ScanCreditCardActivity"
+            android:theme="@style/Theme.Sartor.Scan" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:theme="@style/Theme.Sartor">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!--  -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+
+        </activity>
+    </application>
+
+</manifest>

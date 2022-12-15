@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/trendImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="250dp"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/CurvedEdges10dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        app:srcCompat="@drawable/vimg"
+        android:layout_height="200dp"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        app:layout_constraintStart_toStartOf="@+id/trendImg"
+        app:layout_constraintEnd_toEndOf="@+id/trendImg"
+        app:layout_constraintTop_toTopOf="@id/trendImg"
+        android:src="@drawable/ic_round_play_arrow_24"
+        android:background="@drawable/gradient"
+        app:layout_constraintBottom_toBottomOf="@id/trendImg"
+        android:layout_height="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

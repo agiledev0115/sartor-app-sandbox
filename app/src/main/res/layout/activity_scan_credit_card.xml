@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.user_profile_screens.ReturnsFragment">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_cancel_activity"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivBack"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/ivBack"
+        android:text="Scan credit card"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_hold_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:padding="24dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:elevation="4dp"-->
+<!--        android:background="@color/text_light"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:fontFamily="@font/regular"-->
+<!--        android:text="Hold card here. It will\n scan automatically"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

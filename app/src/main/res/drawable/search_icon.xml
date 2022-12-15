@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/black"
+        android:height="40dp"
+        android:width="40dp"/>
+    <item android:drawable="@drawable/ic_round_search_24"
+        android:height="24dp"
+        android:gravity="center"
+        android:width="24dp"/>
+</layer-list>

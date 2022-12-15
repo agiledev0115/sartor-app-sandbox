@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.sartor.ui.fragments.user_profile_screens.OrdersFragment"
+        tools:layout="@layout/fragment_orders" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.sartor.ui.fragments.shopping_bag_screen.CheckoutFragment"
+        android:label="CheckoutFragment"
+        tools:layout="@layout/fragment_checkout">
+        <action
+            android:id="@+id/action_checkoutFragment_to_shippingInformationFragment"
+            app:destination="@id/shippingInformationFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCreditCardFragment"
+        android:name="com.sartor.ui.fragments.payment_screens.AddCreditCardFragment"
+        android:label="AddCreditCardFragment"
+        tools:layout="@layout/fragment_add_credit_card">
+        <action
+            android:id="@+id/action_addCreditCardFragment_to_orderSummaryFragment"
+            app:destination="@id/orderSummaryFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/couponsFragment"
+        android:name="com.sartor.ui.fragments.user_profile_screens.CouponsFragment"
+        android:label="CouponsFragment"
+        tools:layout="@layout/fragment_coupons" />
+    <fragment
+        android:id="@+id/giftCardsFragment"
+        android:name="com.sartor.ui.fragments.user_profile_screens.GiftCardsFragment"
+        android:label="GiftCardsFragment"
+        tools:layout="@layout/fragment_gift_cards" />
+    <fragment
+        android:id="@+id/orderSummaryFragment"
+        android:name="com.sartor.ui.fragments.payment_screens.OrderSummaryFragment"
+        android:label="OrderSummaryFragment"
+        tools:layout="@layout/fragment_order_summary">
+        <action
+            android:id="@+id/action_orderSummaryFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2"
+            app:enterAnim="@anim/pop_exit_activity"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethodFragment"
+        android:name="com.sartor.ui.fragments.payment_screens.PaymentMethodFragment"
+        android:label="PaymentMethodFragment"
+        tools:layout="@layout/fragment_payment_method">
+        <action
+            android:id="@+id/action_paymentMethodFragment_to_addCreditCardFragment"
+            app:destination="@id/addCreditCardFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_paymentMethodFragment_to_scanCreditCardActivity"
+            app:destination="@id/scanCreditCardActivity"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.sartor.ui.fragments.user_profile_screens.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerProfileOverviewFragment"
+        android:name="com.sartor.ui.fragments.brand_screens.SellerProfileOverviewFragment"
+        android:label="SellerProfileOverviewFragment"
+        tools:layout="@layout/fragment_seller_profile_overview" />
+    <fragment
+        android:id="@+id/shippingInformationFragment"
+        android:name="com.sartor.ui.fragments.payment_screens.ShippingInformationFragment"
+        android:label="ShippingInformationFragment"
+        tools:layout="@layout/fragment_shipping_information">
+        <action
+            android:id="@+id/action_shippingInformationFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/returnsFragment"
+        android:name="com.sartor.ui.fragments.user_profile_screens.ReturnsFragment"
+        tools:layout="@layout/fragment_returns" />
+    <fragment
+        android:id="@+id/discoveryFragment"
+        android:name="com.sartor.ui.fragments.discovery_screens.DiscoveryFragment"
+        android:label="fragment_discovery"
+        tools:layout="@layout/fragment_discovery">
+        <action
+            android:id="@+id/action_discoveryFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_discoveryFragment_to_sellerProfileFragment"
+            app:destination="@id/sellerProfileFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+
+
+        <action
+            android:id="@+id/action_discoveryFragment_to_chatActivity"
+            app:destination="@id/chatActivity"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/shippedFragment"
+        android:name="com.sartor.ui.fragments.user_profile_screens.ShippedFragment"
+        android:label="ShippedFragment"
+        tools:layout="@layout/fragment_shipped" />
+    <fragment
+        android:id="@+id/yourShoppingBagFragment"
+        android:name="com.sartor.ui.fragments.shopping_bag_screen.YourShoppingBagFragment"
+        android:label="YourShoppingBagFragment"
+        tools:layout="@layout/fragment_your_shopping_bag">
+        <action
+            android:id="@+id/action_yourShoppingBagFragment_to_shippingInformationFragment"
+            app:destination="@id/shippingInformationFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_yourShoppingBagFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsDescriptionFragment"
+        android:name="com.sartor.ui.fragments.home_screens.ProductsDescriptionFragment"
+        android:label="fragment_products_description"
+        tools:layout="@layout/fragment_products_description">
+        <action
+            android:id="@+id/action_productsDescriptionFragment_to_yourShoppingBagFragment"
+            app:destination="@id/yourShoppingBagFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_productsDescriptionFragment_to_brandFragment"
+            app:destination="@id/brandFragment" />
+
+
+        <action
+            android:id="@+id/action_productsDescriptionFragment_to_imageViewerFragment"
+            app:destination="@id/imageViewerFragment"
+            app:enterAnim="@anim/down_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/up_down" />
+        <action
+            android:id="@+id/action_productsDescriptionFragment_to_measurementFragment"
+            app:destination="@id/measurementFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <argument
+            android:name="Details"
+            app:argType="com.sartor.data.model.ProductDetails"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerProfileFragment"
+        android:name="com.sartor.ui.fragments.brand_screens.SellerProfileFragment"
+        android:label="fragment_seller_profile"
+        tools:layout="@layout/fragment_seller_profile">
+
+        <argument
+            android:name="brandID"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_sellerProfileFragment_to_yourShoppingBagFragment"
+            app:destination="@id/yourShoppingBagFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_sellerProfileFragment_to_chatActivity"
+            app:destination="@id/chatActivity"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_sellerProfileFragment_to_brandFragment"
+            app:destination="@id/brandFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_sellerProfileFragment_to_imageViewerFragment"
+            app:destination="@id/imageViewerFragment"
+            app:enterAnim="@anim/down_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/up_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerProfileShopFragment"
+        android:name="com.sartor.ui.fragments.brand_screens.SellerProfileShopFragment"
+        android:label="fragment_seller_profile_shop"
+        tools:layout="@layout/fragment_seller_profile_shop" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.sartor.ui.fragments.user_profile_screens.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile">
+        <action
+            android:id="@+id/action_userProfileFragment_to_couponsFragment"
+            app:destination="@id/couponsFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_wishlistFragment"
+            app:destination="@id/wishlistFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_giftCardsFragment"
+            app:destination="@id/giftCardsFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_shippedFragment"
+            app:destination="@id/shippedFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_returnsFragment"
+            app:destination="@id/returnsFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_measurementFragment"
+            app:destination="@id/measurementFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.sartor.ui.fragments.user_profile_screens.WishlistFragment"
+        android:label="fragment_wishlist"
+        tools:layout="@layout/fragment_wishlist" />
+    <activity
+        android:id="@+id/scanCreditCardActivity"
+        android:name="com.sartor.ui.activity.ScanCreditCardActivity"
+        android:label="ScanCreditCardActivity"
+        tools:layout="@layout/activity_scan_credit_card" />
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.sartor.ui.fragments.home_screens.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment2_to_favoriteFragment"
+            app:destination="@id/favoriteFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_homeFragment2_to_productsDescriptionFragment"
+            app:destination="@id/productsDescriptionFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_homeFragment2_to_yourShoppingBagFragment"
+            app:destination="@id/yourShoppingBagFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment2_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_homeFragment2_to_sellerProfileFragment"
+            app:destination="@id/sellerProfileFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_homeFragment2_to_brandFragment"
+            app:destination="@id/brandFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/blogFragment"
+        android:name="com.sartor.ui.fragments.blog_screens.BlogFragment"
+        android:label="blogFragment">
+        <action
+            android:id="@+id/action_blogFragment_to_blogReadFragment"
+            app:destination="@id/blogReadFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.sartor.ui.fragments.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_sellerProfileFragment"
+            app:destination="@id/sellerProfileFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+
+
+        <action
+            android:id="@+id/action_searchProductsFragment_to_yourShoppingBagFragment"
+            app:destination="@id/yourShoppingBagFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+
+        <action
+            android:id="@+id/action_searchFragment2_to_productsDescriptionFragment"
+            app:destination="@id/productsDescriptionFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.sartor.ui.fragments.home_screens.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_favorite">
+
+
+        <action
+            android:id="@+id/favtToProductDesc"
+            app:destination="@id/productsDescriptionFragment"
+            app:enterAnim="@anim/right_to_left"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/left_to_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.sartor.ui.fragments.other.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/fragment_notification" />
+    <activity
+        android:id="@+id/chatActivity"
+        android:name="com.sartor.ui.activity.ChatActivity"
+        android:label="ChatActivity" />
+    <fragment
+        android:id="@+id/blogReadFragment"
+        android:name="com.sartor.ui.fragments.blog_screens.BlogReadFragment"
+        android:label="fragment_blog_read"
+        tools:layout="@layout/fragment_blog_read">
+        <argument
+            android:name="blogID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/brandFragment"
+        android:name="com.sartor.ui.fragments.brand_screens.BrandFragment"
+        android:label="fragment_brand"
+        tools:layout="@layout/fragment_brand">
+        <argument
+            android:name="data"
+            app:argType="string" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/imageViewerFragment"
+        android:name="com.sartor.ui.fragments.other.ImageViewerFragment"
+        android:label="ImageViewerFragment">
+        <argument
+            android:name="image"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/measurementFragment"
+        android:name="com.sartor.ui.fragments.user_profile_screens.MeasurementFragment"
+        android:label="MeasurementFragment" />
+
+</navigation>
