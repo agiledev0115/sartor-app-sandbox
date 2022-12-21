@@ -9,6 +9,87 @@
         android:background="@color/black"
         tools:context=".ui.fragments.login_signup_screens.ForgotPasswordEmailFragment">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/blogImage2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CurvedEdges10dp"
+                app:tint="@color/gray"
+                app:tintMode="multiply" />
+
+            <Space
+                android:id="@+id/space"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--ADDING A To Register TODO REDIRECT TO FRAGMENT REGISTER-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToRegister"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/purple_700"
+                android:fontFamily="@font/regular"
+                android:text="Register"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toTopOf="@+id/btnToExploer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space" />
+            <!--ADDING B To Explore APPS TODO REDIRECT TO FRAGMENT DISCOVERY-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToExploer"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/divider"
+                android:fontFamily="@font/regular"
+                android:text="Explore Apps"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/btnToLogin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnToRegister" />
+            <!--ADDING C To Login APPS TODO REDIRECT TO FRAGMENT LOGIN-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToLogin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="96dp"
+                android:backgroundTint="@color/orange_light"
+                android:fontFamily="@font/regular"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnToExploer" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
             android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
@@ -37,10 +118,12 @@
             app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyLogin"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="220dp"
             android:background="@drawable/left_round_bg"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -115,10 +198,10 @@
                             android:id="@+id/etPassword"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textPassword"
-                            android:imeOptions="actionGo"
                             android:fontFamily="@font/regular"
-                            android:hint="Password" />
+                            android:hint="Password"
+                            android:imeOptions="actionGo"
+                            android:inputType="textPassword" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 

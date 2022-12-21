@@ -86,17 +86,18 @@
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/imageSlider" />
-
+                <!--KLMN CHANGE PRODUCTS DESCRIPTIONS TODO FUNCTION-->
                 <TextView
                     android:id="@+id/tvPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:fontFamily="@font/regular"
                     android:text="$67.99"
-                    android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imageSlider" />
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnBuyNow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/btnBuyNow" />
 
                 <TextView
                     android:id="@+id/tvDescription"
@@ -171,14 +172,15 @@
                     android:id="@+id/btnBuyNow"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16sp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="32dp"
                     android:backgroundTint="@color/black"
                     android:text="Buy now"
                     android:textAllCaps="false"
                     app:layout_constraintEnd_toStartOf="@+id/btnAddtoBag"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/ivSellerImg" />
+                    app:layout_constraintStart_toEndOf="@+id/tvPrice"
+                    app:layout_constraintTop_toBottomOf="@+id/ivSellerImg" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnAddtoBag"

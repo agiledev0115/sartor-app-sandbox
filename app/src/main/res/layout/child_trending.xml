@@ -1,32 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-
+<!--D. DISPLAY TRENDING BRAND IMAGE TODO RESIZE IMAGE IN FUCNTION-->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/trendImg"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/trendImg2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="250dp"
-        android:focusable="true"
-        android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/CurvedEdges10dp"
-        android:layout_marginStart="8dp"
+        app:srcCompat="@drawable/one" />
+    <!--D. DISPLAY TRENDING BRAND IMAGE TODO RESIZE IMAGE IN FUCNTION-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/trendImg2"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
         android:clickable="true"
+        android:focusable="true"
         android:foreground="?selectableItemBackground"
-        app:srcCompat="@drawable/vimg"
-        android:layout_height="200dp"/>
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/trendImg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CurvedEdges10dp"
+        app:srcCompat="@drawable/two" />
+    <!--D. DISPLAY TRENDING BRAND VIDEO TODO RESIZE IMAGE IN FUCNTION & AUTOPLAY-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/trendImg3"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trendImg"
+        app:shapeAppearanceOverlay="@style/CurvedEdges10dp"
+        app:srcCompat="@drawable/vimg" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="40dp"
-        app:layout_constraintStart_toStartOf="@+id/trendImg"
-        app:layout_constraintEnd_toEndOf="@+id/trendImg"
-        app:layout_constraintTop_toTopOf="@id/trendImg"
-        android:src="@drawable/ic_round_play_arrow_24"
+        android:layout_height="40dp"
         android:background="@drawable/gradient"
-        app:layout_constraintBottom_toBottomOf="@id/trendImg"
-        android:layout_height="40dp"/>
+        android:src="@drawable/ic_round_play_arrow_24"
+        app:layout_constraintBottom_toBottomOf="@+id/trendImg3"
+        app:layout_constraintEnd_toEndOf="@+id/trendImg3"
+        app:layout_constraintStart_toStartOf="@+id/trendImg3"
+        app:layout_constraintTop_toTopOf="@+id/trendImg3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
