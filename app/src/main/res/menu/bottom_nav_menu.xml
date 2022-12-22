@@ -11,11 +11,10 @@
         android:icon="@drawable/ic_discovery"
         android:enabled="true"
         android:title="Discovery" />
-
+<!-- PART F: REPLACE SEARCH WITH LOGO-->
     <item
         android:id="@+id/searchFragment"
-        android:enabled="true"
-        android:icon="@drawable/ic_search"
+        android:enabled="false"
         android:title="Search" />
 
     <item
