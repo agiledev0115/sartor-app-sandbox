@@ -6,33 +6,158 @@
     <data>
 
     </data>
-
+<!--PART R ON VIEW PRODUCTS, LIKE, COMMENT, SHARE-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@color/black"
         android:layout_height="match_parent"
-        tools:context=".ui.fragments.other.ImageViewerFragment">
+        android:background="@color/black"
+        tools:layout_editor_absoluteY="41dp">
 
-        <ImageView
-            android:id="@+id/close"
-            android:layout_width="40dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="128dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:focusable="true"
-            android:clickable="true"
-            android:background="?selectableItemBackgroundBorderless"
-            android:layout_margin="16dp"
-            android:src="@drawable/ic_cancel_activity"
-            android:layout_height="40dp" />
+            tools:context=".ui.fragments.other.ImageViewerFragment">
 
-        <ImageView
-            android:id="@+id/img"
-            android:layout_width="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/one"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_height="wrap_content" />
+
+            <Space
+                android:id="@+id/space2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/btnLike"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/one"
+                app:layout_constraintBottom_toTopOf="@+id/space2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_cancel_activity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnPostComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Post"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputEditText"
+                app:layout_constraintEnd_toEndOf="@+id/textInputEditText"
+                app:layout_constraintTop_toTopOf="@+id/textInputEditText" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Liked by Sartor And 56 Others"
+                android:textColor="@color/divider"
+                app:layout_constraintBottom_toTopOf="@+id/textInputEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnLike" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/gray"
+                android:gravity="top"
+                android:hint="Add Comment"
+                android:maxLines="2"
+                android:padding="15dp"
+                android:textColor="@color/divider"
+                android:textColorHighlight="@color/divider"
+                android:textColorHint="@color/divider"
+                android:textColorLink="@color/divider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <ImageView
+                android:id="@+id/btnLike"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="16dp"
+                android:layout_marginStart="32dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_heart_red"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space2" />
+
+            <ImageView
+                android:id="@+id/btnComment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:layout_marginTop="8dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_comment"
+                app:layout_constraintBottom_toBottomOf="@+id/btnLike"
+                app:layout_constraintStart_toEndOf="@+id/btnLike"
+                app:layout_constraintTop_toTopOf="@+id/btnLike" />
+
+            <ImageView
+                android:id="@+id/btnShare"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="16dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_go_to_chats_small"
+                app:layout_constraintBottom_toBottomOf="@+id/btnComment"
+                app:layout_constraintStart_toEndOf="@+id/btnComment"
+                app:layout_constraintTop_toTopOf="@+id/btnComment" />
+
+            <ImageView
+                android:id="@+id/btnBookmark"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_bag_white"
+                app:layout_constraintBottom_toBottomOf="@+id/btnShare"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnShare" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
