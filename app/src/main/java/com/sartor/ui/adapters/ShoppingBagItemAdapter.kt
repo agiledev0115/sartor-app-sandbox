@@ -40,8 +40,8 @@ class ShoppingBagItemAdapter(val list: List<CartItem>, val context: Context) :
 
          //Todo -> Image received from server is wrong using brand image, REVERT LATER
 
-         val BASE_URL = "http://52.159.111.122:8082"
-        holder.img.placeImage(BASE_URL + list[position].productImage)
+
+        holder.img.placeImage(Constant.BASE_URL + list[position].productImage)
         //Log.i("CARTIMAGE",Constant.BASE_URL + list[position].productImage)
 
         holder.img.setOnClickListener {
