@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.sartor.R
@@ -27,6 +28,12 @@ class PhotoGalleryAdapter(val list: List<ProductImage>, val context: Context) : 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        //ADD ICON BY TYPE DATA GALLERY
+        if(position == 0 || position == 2 || position == 5){
+            holder.iconImage.visibility = View.VISIBLE
+        }else{
+            holder.iconVideo.visibility = View.VISIBLE
+        }
 
         holder.img.placeImage(Constant.BASE_URL+list[position].image)
         holder.img.setOnClickListener {
@@ -42,5 +49,7 @@ class PhotoGalleryAdapter(val list: List<ProductImage>, val context: Context) : 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val img: ImageView = itemView.findViewById(R.id.photo)
+        val iconImage: ImageView = itemView.findViewById(R.id.iconImage)
+        val iconVideo: ImageView = itemView.findViewById(R.id.iconVideo)
     }
 }
