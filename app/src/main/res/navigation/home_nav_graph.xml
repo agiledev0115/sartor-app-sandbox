@@ -388,6 +388,9 @@
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
             app:popExitAnim="@anim/left_to_right" />
+        <action
+            android:id="@+id/action_homeFragment2_to_brandShowFragment"
+            app:destination="@id/brandShowFragment" />
     </fragment>
     <fragment
         android:id="@+id/blogFragment"
@@ -490,5 +493,13 @@
         android:id="@+id/measurementFragment"
         android:name="com.sartor.ui.fragments.user_profile_screens.MeasurementFragment"
         android:label="MeasurementFragment" />
+    <fragment
+        android:id="@+id/brandShowFragment"
+        android:name="com.sartor.ui.fragments.brand_screens.BrandShowFragment"
+        android:label="fragment_brand_show">
+        <argument
+            android:name="brandID"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

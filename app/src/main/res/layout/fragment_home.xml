@@ -86,10 +86,9 @@
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nestedScroll"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:overScrollMode="never"
             android:scrollbars="none"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivSartor">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -106,18 +105,21 @@
                     android:overScrollMode="never"
                     android:scrollbars="none"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:listitem="@layout/child_status" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvTrending"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:orientation="horizontal"
                     android:overScrollMode="never"
                     android:scrollbars="none"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/rvStatus"
                     app:layout_constraintTop_toBottomOf="@+id/rvStatus"
                     tools:listitem="@layout/child_trending" />
 
@@ -130,6 +132,7 @@
                     android:paddingStart="16dp"
                     android:text="See what's new"
                     android:textSize="20sp"
+                    android:visibility="gone"
                     app:layout_constraintTop_toBottomOf="@id/rvTrending" />
 
                 <!--                <androidx.recyclerview.widget.RecyclerView-->
@@ -158,7 +161,8 @@
                     android:paddingEnd="4dp"
                     android:scrollbars="none"
                     app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvSeeWhatsNew"
                     tools:listitem="@layout/child_home_screen2" />
 

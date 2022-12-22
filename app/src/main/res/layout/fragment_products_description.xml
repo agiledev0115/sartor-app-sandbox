@@ -174,7 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginEnd="8dp"
                     android:backgroundTint="@color/black"
                     android:text="Buy now"
                     android:textAllCaps="false"
@@ -189,13 +189,12 @@
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_black_bag"
                     android:text="Add to bag"
-                    app:rippleColor="@color/gray"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="@id/btnBuyNow"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btnBuyNow"
                     app:layout_constraintTop_toTopOf="@id/btnBuyNow"
+                    app:rippleColor="@color/gray"
                     app:strokeColor="@color/black" />
 
                 <com.google.android.material.tabs.TabLayout
