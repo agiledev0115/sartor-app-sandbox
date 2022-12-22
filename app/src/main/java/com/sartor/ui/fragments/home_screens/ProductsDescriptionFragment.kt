@@ -101,7 +101,7 @@ class ProductsDescriptionFragment : Fragment() {
 
 
 
-        binding?.ivSellerImg?s.setOnClickListener {
+        binding?.ivSellerImg?.setOnClickListener {
 
 
         }

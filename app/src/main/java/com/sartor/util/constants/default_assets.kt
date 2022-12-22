@@ -90,26 +90,39 @@ val imgHugo: ProductResponse.Img = ProductResponse.Img(
     "https://i.pinimg.com/236x/98/c7/98/98c798d1959e6aff3c3e4cdd638f1343.jpg"
 )
 
+
 val products: List<ProductResponse> = listOf(
     ProductResponse(
-        Brands( listOf("followers"),listOf("likes"),true,
+        ProductResponse.Brands(
+            "2022-12-12",
+            listOf("followers"),"1",
             "https://www.freepnglogos.com/uploads/adidas-logo-png-black-0.png",
-            "Adidas","1"), "Sport", "2022-12-12", "Adidas Desciption","1",
+            true,listOf("likes"),
+            "Adidas"), "Sport", "2022-12-12",
+        ProductResponse.CreatedBy(
+            true,
+            "FALSE",
+            true,
+            "2022-12-12",
+            "1",
+            ProductResponse.CreatedBy.Internal(
+                "2022-12-12",
+                "Adidas",
+                "2022-12-12",
+                "admin",
+                "admin",
+                "admin",
+                "https://www.freepnglogos.com/uploads/adidas-logo-png-black-0.png",
+                "2022-12-12",
+                "admin",
+            ),
+            true,
+            "admin",
+            "Active",
+            "Admin"
+        ),"Adidas Desciption","1",
         imgAdidas,"Shoes Adidas",100,5,2,"Adidas"
-    ),
-    ProductResponse(
-        Brands( listOf("followers"),listOf("likes"),true,
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxIi6gMPvrnlwYIn6XofUraBrJFRiGYEV_oe0CMqqHFOoCmX8&s",
-
-            "Nike","2"), "Sport", "2022-12-12", "Nike Desciption","1",
-        imgNike,"T-Shirt Nike",100,5,2,"Nike"
-    ),
-    ProductResponse(
-        Brands( listOf("followers"),listOf("likes"),true,
-            "https://i.pinimg.com/236x/98/c7/98/98c798d1959e6aff3c3e4cdd638f1343.jpg",
-            "Hugo","3"), "Sport", "2022-12-12", "Hugo Desciption","1",
-        imgHugo,"Blazer Hugo",100,5,2,"Hugo"
-    ),
+    )
 )
 val productsData: List<Product> = listOf(
     Product(
@@ -218,16 +231,23 @@ val reviews: List<Review> = listOf(
 
 val blogList: List<BlogResponse> = listOf(
     BlogResponse("2022-12-11",
-        "1",
+        BlogResponse.CreatedBy(
+            true,
+            "FALSE",
+            true,
+            "1",
+            "1",
+            true,
+            "2022-12-12",
+            "Admin",
+            "Active",
+            "Admin"
+        ),
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgEcdRp5cMYDNXXYSGPBcJiH1aRcx7QN9U9g&usqp=CAU",
         "So do we even ask ourselves what fashion is exactly??",
         "story 01",
-    ),  BlogResponse("2022-12-11",
-        "2",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgEcdRp5cMYDNXXYSGPBcJiH1aRcx7QN9U9g&usqp=CAU",
-        "So do we even ask ourselves what fashion is exactly??",
-        "story 02",
-    ),
+        "Title 01",
+    )
 )
 
 val coupons: List<Coupon> = listOf(

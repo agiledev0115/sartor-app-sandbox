@@ -55,16 +55,17 @@ class WelcomeActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.Main).launch {
             delay(1000)
-
-            if (sharedPreference.isLogin()) {
-                startActivity(Intent(this@WelcomeActivity, HomeActivity::class.java))
+    startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
                 finish()
-            } else {
-                startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
-                finish()
-            }
-//            startActivity(Intent(this@WelcomeActivity, TestActivity::class.java))
-//            finish()
+            /*      if (sharedPreference.isLogin()) {
+                      startActivity(Intent(this@WelcomeActivity, HomeActivity::class.java))
+                      finish()
+                  } else {
+                      startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
+                      finish()
+                  }
+      //            startActivity(Intent(this@WelcomeActivity, TestActivity::class.java))
+      //            finish()*/
         }
     }
 
